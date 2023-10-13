@@ -1,9 +1,20 @@
+import NavbarComponent from "./components/ui/Navbar.component";
+import FooterComponent from "./components/ui/Footer.component";
 
 
 function App() {
   return (
-    <div className="App">
-      <h3>CryptoWeb</h3>
+    <div>
+        {/* Navbar */}
+          <NavbarComponent />
+        {/* Wrapper */}
+          <div className="wrapper">
+              <h2>Wrapper</h2>
+          </div>
+
+        {/* Footer */}
+           <FooterComponent />
+
     </div>
   );
 }
