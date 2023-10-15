@@ -4,8 +4,8 @@ import './Footer.css';
 const FooterComponent = () => {
     return (
        <footer className='footer'>
-          <span>@CryptoCurrency.</span>
-           <span className='d-none d-md-inline'>All rights reserved</span>
+          <span>@CryptoCurrency</span>
+           <span className='d-none d-md-inline ms-1'>All rights reserved</span>
        </footer>
     );
 };
