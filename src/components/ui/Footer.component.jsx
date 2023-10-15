@@ -1,10 +1,12 @@
 import React from 'react';
+import './Footer.css';
 
 const FooterComponent = () => {
     return (
-        <div>
-            <h4>FooterComponent</h4>
-        </div>
+       <footer className='footer'>
+          <span>@CryptoCurrency.</span>
+           <span className='d-none d-md-inline'>All rights reserved</span>
+       </footer>
     );
 };
 
