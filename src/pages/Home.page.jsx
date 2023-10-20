@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import SpinnerComponent from "../components/ui/Spinner.component";
 import axios from "axios";
 import {baseUrl} from "../constants/api";
+import CoinsComponent from "../components/coins/Coins.component";
 
 const HomePage = () => {
 
@@ -15,6 +16,8 @@ const HomePage = () => {
            .then((response) =>{
                setLoading(false);
                console.log(response.data);
+               setData(response.data);
+
            })
            .catch(error => {
                setError("An error occured");
@@ -33,7 +36,7 @@ const HomePage = () => {
 
             <div className="row">
                 <div className="col-12">
-                    {loading ? <SpinnerComponent /> : error !== "" ? <h1>{error}</h1> : <h1>Data Ready</h1>}
+                    {loading ? <SpinnerComponent /> : error !== "" ? <h1>{error}</h1> : <CoinsComponent data={data} /> }
                 </div>
             </div>
 
